@@ -81,13 +81,13 @@ test-python2: clean env2
 	eval "$$(pyenv init -)" && \
 	eval "$$(pyenv virtualenv-init -)" && \
 	pyenv activate $(NAME)-python2 && \
-	python ./$(NAME)/tests
+	coverage run ./$(NAME)/tests
 
 test-python3: clean env3
 	eval "$$(pyenv init -)" && \
 	eval "$$(pyenv virtualenv-init -)" && \
 	pyenv activate $(NAME)-python3 && \
-	python ./$(NAME)/tests
+	coverage run ./$(NAME)/tests
 
 .PHONY: test-tox
 test-tox:
@@ -102,6 +102,19 @@ testimport:
 	pip install -U . && \
 	python -c "import $(NAME); print('$(NAME)', $(NAME))" && \
 	echo "OK"
+
+
+# =========================================
+#       coverage (codecov)
+# --------------------------------------
+
+.PHONY: coverage
+coverage:
+	coverage run ./$(NAME)/tests
+
+.PHONY: coverage-codecov
+coverage-codecov:
+	bash <(curl -s https://codecov.io/bash)
 
 
 # =========================================

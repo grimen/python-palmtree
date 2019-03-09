@@ -5,5 +5,7 @@ python:
     - "3.7-dev"
 install: make install-ci
 script: make test-ci
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
 notifications:
     email: false

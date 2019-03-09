@@ -32,7 +32,6 @@ import stat
 import time
 import datetime
 import json
-# import chalk as colors
 import colorful as color
 import inspecta as util
 

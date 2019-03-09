@@ -1,5 +1,5 @@
 
-# `python-palmtree` [![PyPI version](https://badge.fury.io/py/palmtree.svg)](https://badge.fury.io/py/palmtree) [![Build Status](https://travis-ci.com/grimen/python-palmtree.svg?token=sspjPRWbecBSpceU8Jyn&branch=master)](https://travis-ci.com/grimen/python-palmtree)
+# `python-palmtree` [![PyPI version](https://badge.fury.io/py/palmtree.svg)](https://badge.fury.io/py/palmtree) [![Build Status](https://travis-ci.com/grimen/python-palmtree.svg?token=sspjPRWbecBSpceU8Jyn&branch=master)](https://travis-ci.com/grimen/python-palmtree) [![Coverage Status](https://codecov.io/gh/grimen/python-palmtree/branch/master/graph/badge.svg)](https://codecov.io/gh/grimen/python-palmtree)
 
 *A pretty filesystem tree inspection utility - for Python.*
 

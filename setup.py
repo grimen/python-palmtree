@@ -88,7 +88,8 @@ keywords = [
 readme = get_readme()
 requirements = get_requirements()
 packages = setuptools.find_packages()
-data_files = find_data_files(['*.*'], os.path.join(name, 'tests', '__fixtures__'))
+data_files = [] # find_data_files(['*.*'], os.path.join(name, 'tests', '__fixtures__'))
+
 
 config = {
     'name': name,

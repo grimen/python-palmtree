@@ -124,7 +124,7 @@ coverage: clean env3
 
 .PHONY: coverage-codecov
 coverage-codecov: coverage
-	bash <(curl -s https://codecov.io/bash)
+	curl -s https://codecov.io/bash | bash
 
 .PHONY: coverage-ci
 coverage-ci:
@@ -132,7 +132,7 @@ coverage-ci:
 
 .PHONY: coverage-ci-codecov
 coverage-ci-codecov:
-	bash <(curl -s https://codecov.io/bash)
+	curl -s https://codecov.io/bash | bash
 
 
 # =========================================

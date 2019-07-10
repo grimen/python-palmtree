@@ -6,6 +6,7 @@
 import os
 import glob
 import setuptools
+import setupextras
 
 # DISABLED/BUG: this line fails when `pip install palmtree` but works `pip install .`
 # from palmtree import __version__

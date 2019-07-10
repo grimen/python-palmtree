@@ -84,13 +84,7 @@ package-release-dev: package-build
 # --------------------------------------
 
 .PHONY: test
-test: test-python2 test-python3
-
-test-python2: clean env2
-	eval "$$(pyenv init -)" && \
-	eval "$$(pyenv virtualenv-init -)" && \
-	pyenv activate $(NAME)-python2 && \
-	coverage run ./$(NAME)/tests
+test: test-python3
 
 test-python3: clean env3
 	eval "$$(pyenv init -)" && \
@@ -152,17 +146,7 @@ env-install-linux:
 	curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 .PHONY: env-create
-env-create: env-create-python2 env-create-python3
-
-.PHONY: env-create-python2
-env-create-python2:
-	eval "$$(pyenv init -)" && \
-	eval "$$(pyenv virtualenv-init -)" && \
-	pyenv virtualenv -f $(PYTHON_2_VERSION) $(NAME)-python2 && \
-	pyenv activate $(NAME)-python2 && \
-	pip install --upgrade pip && \
-	pip install -U -r requirements.txt && \
-	pyenv versions | grep --color=always $(NAME)-python
+env-create: env-create-python3
 
 .PHONY: env-create-python3
 env-create-python3:
@@ -175,15 +159,7 @@ env-create-python3:
 	pyenv versions | grep --color=always $(NAME)-python
 
 .PHONY: env-destroy
-env-destroy: env-destroy-python2 env-destroy-python3
-
-.PHONY: env-destroy-python2
-env-destroy-python2:
-	eval "$$(pyenv init -)" && \
-	eval "$$(pyenv virtualenv-init -)" && \
-	pyenv shell system && \
-	pyenv uninstall -f $(NAME)-python2 && \
-	pyenv versions | grep --color=always $(NAME)-python
+env-destroy: env-destroy-python3
 
 .PHONY: env-destroy-python3
 env-destroy-python3:
@@ -199,13 +175,6 @@ env-reset:
 
 .PHONY: env
 env: env3
-
-.PHONY: env2
-env2:
-	eval "$$(pyenv init -)" && \
-	eval "$$(pyenv virtualenv-init -)" && \
-	pyenv activate $(NAME)-python2 && \
-	pyenv versions | grep --color=always $(NAME)-python
 
 .PHONY: env3
 env3:

@@ -1,7 +1,7 @@
 
 # `palmtree` [![PyPI version](https://badge.fury.io/py/palmtree.svg)](https://badge.fury.io/py/palmtree) [![Build Status](https://travis-ci.com/grimen/python-palmtree.svg?token=sspjPRWbecBSpceU8Jyn&branch=master)](https://travis-ci.com/grimen/python-palmtree) [![Coverage Status](https://codecov.io/gh/grimen/python-palmtree/branch/master/graph/badge.svg)](https://codecov.io/gh/grimen/python-palmtree)
 
-*A pretty filesystem tree inspection utility - for Python.*
+*A pretty filesystem tree inspection utility - for Python 3.*
 
 ![Screenshot](https://dvfr2lc5dhzsq.cloudfront.net/items/2C2w333H38250F1U3Z1i/Screen%20Shot%202019-03-08%20at%2016.15.29.png?X-CloudApp-Visitor-Id=675422)
 
@@ -25,7 +25,7 @@ $ pip install palmtree
 Very basic **[example](https://github.com/grimen/python-mybase/tree/master/examples/basic.py)**:
 
 ```python
-import palmtree
+import palmtree # NOTE: Python 3 is required
 
 import os
 import stat

@@ -17,7 +17,7 @@ import setupextras
 # --------------------------------------
 
 name = 'palmtree'
-version = '0.2.0'
+version = '0.2.1'
 description = 'A pretty filesystem tree inspection utility - for Python.'
 keywords = [
     'tree',
